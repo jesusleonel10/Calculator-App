@@ -153,8 +153,8 @@ body {
 .calculator {
     max-width: 38rem;
     min-width: 25rem;
-    margin: 4% auto;
-    padding: 20px;
+    width: 100vw;
+    margin: 1rem auto;
 }
 
 /* Header */
