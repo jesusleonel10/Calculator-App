@@ -1,0 +1,290 @@
+:root {
+    --font: 'League Spartan', sans-serif;
+}
+
+*, *,::after, *::before {box-sizing: border-box;}
+
+html {
+    font-family: var(--font);
+}
+
+body {
+    user-select: none;
+    transition: all .2s ease;
+    font-size: 16px;
+}
+
+/* Theme Dark */
+
+.body-bg-dark {
+    background-color: hsl(222, 26%, 31%);
+}
+
+.header-text-dark {
+    color: #fff;
+}
+
+.bg-toggle-dark {
+    background-color: hsl(223, 31%, 20%);
+}
+
+.button-toggle-dark {
+    background-color: hsl(6, 63%, 50%);
+}
+
+.input-dark {
+    background-color: hsl(224, 36%, 15%);
+    color: #fff;
+}
+
+.buttons-bg-dark {
+    background-color: hsl(223, 31%, 20%);
+}
+
+.num-operators-dark {
+    color: hsl(221, 14%, 31%);
+    background-color: hsl(30, 25%, 89%);
+    border-bottom: 5px solid hsl(28, 16%, 65%);   
+}
+
+.reset-del-dark {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(225, 21%, 49%);
+    border-bottom: 5px solid hsl(224, 28%, 35%);
+}
+
+.equal-dark {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(6, 63%, 50%);
+    border-bottom: 5px solid hsl(6, 70%, 34%);
+}
+
+/* Theme Light */
+
+.body-bg-light {
+    background-color: hsl(0, 0%, 90%);
+}
+
+.header-text-light {
+    color: hsl(60, 10%, 19%);
+}
+
+.bg-toggle-light {
+    background-color: hsl(0, 5%, 81%);
+}
+
+.button-toggle-light {
+    background-color: hsl(25, 98%, 40%);
+}
+
+.input-light {
+    background-color: hsl(0, 0%, 95%);
+    color: hsl(60, 10%, 19%);
+}
+
+.buttons-bg-light {
+    background-color: hsl(0, 5%, 81%)
+}
+
+.num-operators-light {
+    color: hsl(60, 10%, 19%);
+    background-color: hsl(45, 7%, 89%);
+    border-bottom: 5px solid hsl(35, 11%, 61%);   
+}
+
+.reset-del-light {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(185, 42%, 37%);
+    border-bottom: 5px solid hsl(185, 58%, 25%);
+}
+
+.equal-light {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(25, 98%, 40%);
+    border-bottom: 5px solid hsl(25, 99%, 27%);
+}
+
+/* Theme Uva */
+
+.body-bg-uva {
+    background-color: hsl(268, 75%, 9%);
+}
+
+.header-text-uva {
+    color: hsl(52, 100%, 62%);
+}
+
+.bg-toggle-uva {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.button-toggle-uva {
+    background-color: hsl(176, 100%, 44%);
+}
+
+.input-uva {
+    background-color: hsl(268, 71%, 12%);
+    color: hsl(52, 100%, 62%);
+}
+
+.buttons-bg-uva {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.num-operators-uva {
+    color: hsl(52, 100%, 62%);
+    background-color: hsl(268, 47%, 21%);
+    border-bottom: 5px solid hsl(290, 70%, 36%);   
+}
+
+.reset-del-uva {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(281, 89%, 26%);
+    border-bottom: 5px solid hsl(285, 91%, 52%);
+}
+
+.equal-uva {
+    color: hsl(198, 20%, 13%);
+    background-color: hsl(176, 100%, 44%);
+    border-bottom: 5px solid hsl(177, 92%, 70%);
+}
+
+
+.calculator {
+    max-width: 38rem;
+    min-width: 25rem;
+    margin: 4% auto;
+    padding: 20px;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    transition: all .2s ease;
+}
+
+header h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.theme {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    font-size: .9rem;
+}
+
+.theme-number {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: .2rem;
+}
+
+/* Button Toggle */
+
+.button {
+    height: 16px;
+    width: 16px;
+    margin: 0;
+    appearance: none;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all .2s ease;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.tri-state-toggle {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 50px;
+    width: 70px;
+    height: 26px;
+    transition: all .2s ease;
+}
+
+#one {
+    opacity: 1;
+}
+
+
+/* Input */
+.input {
+    border-radius: 10px;
+    height: 80px;
+    padding: 15px;
+    text-align: right;
+    font-size: 2.5rem;
+    transition: all .2s ease;
+}
+
+/* Buttons */
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    margin-top: 1rem;
+    padding: 25px;
+    border-radius: 10px;
+    transition: all .2s ease;
+}
+
+
+#reset {
+    grid-column: 1 / 3;
+}
+
+#result {
+    grid-column: 3 / 5;
+}
+
+button {
+    all: unset;
+    height: 65px;
+    cursor: pointer;
+}
+
+button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.numbers,
+.operators {
+    font-size: 2rem;
+}
+
+.reset-delete {
+    font-size: 1.2rem;
+}
+
+.action-button {
+	position: relative;
+    padding: 5px 0 0 0;
+	border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.action-button:hover {
+    filter: brightness(110%);
+}
+
+.action-button:active {
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid transparent;
+}

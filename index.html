@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d1314feeb4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <title>Calculadora Basica HTML-CSS-JS</title>
+</head>
+<body class="body-bg-dark">
+    <main class="calculator">
+        <header class="header-text-dark">
+            <h3>calc</h3>
+            <div class="theme">
+                <div class="text">
+                    <span>THEME</span>
+                </div>
+                <div class="button-toggle">
+                    <div class="theme-number">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                    </div>
+                    <div class="tri-state-toggle bg-toggle-dark">
+                        <input class="button button-theme button-toggle-dark" type="radio" name="toggle" id="one" />
+                        <input class="button button-theme button-toggle-dark" type="radio" name="toggle" id="two" />
+                        <input class="button button-theme button-toggle-dark" type="radio" name="toggle" id="three" />                      
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="input input-dark" id="input"></div>
+        <section class="buttons buttons-bg-dark">
+              
+            <button class="num-operators-dark operation-button numbers action-button"><div>7</div></button>
+            <button class="num-operators-dark operation-button numbers action-button"><div>8</div></button>
+            <button class="num-operators-dark operation-button numbers action-button"><div>9</div></button>
+            <button class="reset-del-dark reset-delete action-button" id="delete"><div>DEL</div></button>
+            
+            <button class="num-operators-dark operation-button numbers action-button"><div>4</div></button>
+            <button class="num-operators-dark operation-button numbers action-button"><div>5</div></button>
+            <button class="num-operators-dark operation-button numbers action-button"><div>6</div></button>
+            <button class="num-operators-dark operation-button operators action-button"><div>+</div></button>
+            
+            <button class="num-operators-dark operation-button numbers action-button"><div>1</div></button>
+            <button class="num-operators-dark operation-button numbers action-button"><div>2</div></button>
+            <button class="num-operators-dark operation-button numbers action-button"><div>3</div></button>
+            <button class="num-operators-dark operation-button operators action-button"><div>-</div></button>
+            <button class="num-operators-dark operation-button numbers action-button"><div>.</div></button>
+            <button class="num-operators-dark operation-button numbers action-button"><div>0</div></button>
+            <button class="num-operators-dark operation-button operators action-button"><div>&divide;</div></button>
+            <button class="num-operators-dark operation-button operators action-button"><div>&times;</div></button>
+            
+            <button class="reset-del-dark reset-delete action-button" id="reset"><div>RESET</div></button>
+            <button class="equal-dark equal action-button" id="result"><div> = </div></button>
+            
+        </section>
+    </main>
+    <script src="js/index.js"></script>
+</body>
+</html>
