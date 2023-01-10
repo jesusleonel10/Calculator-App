@@ -12,6 +12,7 @@ body {
     user-select: none;
     transition: all .2s ease;
     font-size: 16px;
+    margin: 0;
 }
 
 /* Theme Dark */
@@ -152,8 +153,10 @@ body {
 
 .calculator {
     max-width: 38rem;
-    min-width: 25rem;
+    min-width: 20rem;
     margin: .5rem auto;
+    height: 100vh;
+    padding: 0 1rem;
 }
 
 /* Header */
