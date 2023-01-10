@@ -2,17 +2,166 @@
     --font: 'League Spartan', sans-serif;
 }
 
-*, *,::after, *::before {box-sizing: border-box;}
+*, *,::after, *::before {box-sizing: border-box; margin:0; padding:0;}
 
-html {
+
+html, body {
     font-family: var(--font);
-}
-
-body {
     user-select: none;
     transition: all .2s ease;
     font-size: 16px;
+    height: 100vh;
+}
+
+main {
+    height:100%;
+    width:100%;
+    display:table;
+    overflow:hidden;
+}
+
+.container {
+    display:table-cell;
+    width:100%;
+    vertical-align: top;
+}
+
+.calculator {
+    max-width: 38rem;
+    min-width: 20rem;
+    margin: 0 auto;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    transition: all .2s ease;
+}
+
+header h3 {
+    font-size: 2rem;
     margin: 0;
+}
+
+.theme {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    font-size: .9rem;
+}
+
+.theme-number {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: .2rem;
+}
+
+/* Button Toggle */
+
+.button {
+    height: 16px;
+    width: 16px;
+    margin: 0;
+    appearance: none;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all .2s ease;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.tri-state-toggle {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 50px;
+    width: 70px;
+    height: 26px;
+    transition: all .2s ease;
+}
+
+#one {
+    opacity: 1;
+}
+
+
+/* Input */
+.input {
+    border-radius: 10px;
+    height: 80px;
+    padding: 15px;
+    text-align: right;
+    font-size: 2.5rem;
+    transition: all .2s ease;
+}
+
+/* Buttons */
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    margin-top: 1rem;
+    padding: 25px;
+    border-radius: 10px;
+    transition: all .2s ease;
+}
+
+
+#reset {
+    grid-column: 1 / 3;
+}
+
+#result {
+    grid-column: 3 / 5;
+}
+
+button {
+    all: unset;
+    height: 65px;
+    cursor: pointer;
+}
+
+button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.numbers,
+.operators {
+    font-size: 2rem;
+}
+
+.reset-delete {
+    font-size: 1.2rem;
+}
+
+.action-button {
+	position: relative;
+    padding: 5px 0 0 0;
+	border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.action-button:hover {
+    filter: brightness(110%);
+}
+
+.action-button:active {
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid transparent;
 }
 
 /* Theme Dark */
@@ -148,145 +297,4 @@ body {
     color: hsl(198, 20%, 13%);
     background-color: hsl(176, 100%, 44%);
     border-bottom: 5px solid hsl(177, 92%, 70%);
-}
-
-
-.calculator {
-    max-width: 38rem;
-    min-width: 20rem;
-    margin: .5rem auto;
-    height: 100vh;
-    padding: 0 1rem;
-}
-
-/* Header */
-
-header {
-    display: flex;
-    justify-content: space-between;
-    margin: 2rem 0;
-    transition: all .2s ease;
-}
-
-header h3 {
-    font-size: 2rem;
-    margin: 0;
-}
-
-.theme {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-end;
-    font-size: .9rem;
-}
-
-.theme-number {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: .2rem;
-}
-
-/* Button Toggle */
-
-.button {
-    height: 16px;
-    width: 16px;
-    margin: 0;
-    appearance: none;
-    border-radius: 50%;
-    opacity: 0;
-    transition: all .2s ease;
-}
-
-.button:hover {
-    cursor: pointer;
-}
-
-.tri-state-toggle {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 50px;
-    width: 70px;
-    height: 26px;
-    transition: all .2s ease;
-}
-
-#one {
-    opacity: 1;
-}
-
-
-/* Input */
-.input {
-    border-radius: 10px;
-    height: 80px;
-    padding: 15px;
-    text-align: right;
-    font-size: 2.5rem;
-    transition: all .2s ease;
-}
-
-/* Buttons */
-
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
-    margin-top: 1rem;
-    padding: 25px;
-    border-radius: 10px;
-    transition: all .2s ease;
-}
-
-
-#reset {
-    grid-column: 1 / 3;
-}
-
-#result {
-    grid-column: 3 / 5;
-}
-
-button {
-    all: unset;
-    height: 65px;
-    cursor: pointer;
-}
-
-button div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.numbers,
-.operators {
-    font-size: 2rem;
-}
-
-.reset-delete {
-    font-size: 1.2rem;
-}
-
-.action-button {
-	position: relative;
-    padding: 5px 0 0 0;
-	border-radius: 8px;
-    font-weight: 700;
-    text-align: center;
-    transition: all 0.1s;
-	-webkit-transition: all 0.1s;
-}
-
-.action-button:hover {
-    filter: brightness(110%);
-}
-
-.action-button:active {
-	transform: translate(0px,5px);
-  -webkit-transform: translate(0px,5px);
-	border-bottom: 1px solid transparent;
 }
