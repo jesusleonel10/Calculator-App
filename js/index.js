@@ -1,7 +1,7 @@
 // Asignamos variables al input donde muestra los valores (numeros y operadores)
 const input = document.getElementById("input")
-const number = document.querySelectorAll(".numbers div")
-const operator = document.querySelectorAll(".operators div")
+const number = document.querySelectorAll(".numbers span")
+const operator = document.querySelectorAll(".operators span")
 const result = document.getElementById("result")
 const clear = document.getElementById("reset")
 const deleted = document.getElementById("delete")
@@ -12,7 +12,7 @@ let resultShow = false
 
 const maxLengthInput = (str) => {
     let lengthStr = str.length
-    lengthStr > 13 ? input.style.fontSize = "1.5rem" : input.style.fontSize = "2.5rem"
+    lengthStr > 13 ? input.style.fontSize = "2rem" : input.style.fontSize = "3.2rem"
 }
 
 
